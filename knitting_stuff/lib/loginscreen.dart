@@ -44,7 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Image.asset(
-                      'assets/images/foodninjared.png',
+                      'assets/images/logo.png',
                       scale: 2,
                     ),
                     TextField(

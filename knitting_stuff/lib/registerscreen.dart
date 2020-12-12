@@ -36,7 +36,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 child: Column(
                   children: [
                     Image.asset(
-                      'assets/images/foodninjared.png',
+                      'assets/images/logo.png',
                       scale: 2,
                     ),
                     TextField(

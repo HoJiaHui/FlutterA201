@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Image.asset(
-                'assets/images/foodninjared.png',
+                'assets/images/logo.png',
                scale: 2,
               ),
               SizedBox(
