@@ -128,7 +128,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         type: ProgressDialogType.Normal, isDismissible: false);
     pr.style(message: "Registration...");
     await pr.show();
-    http.post("https://itprojectoverload.com /knittingstuff/php/register_user.php",
+    http.post("https://itprojectoverload.com/knittingstuff/php/register_user.php",
         body: {
           "name": _name,
           "email": _email,

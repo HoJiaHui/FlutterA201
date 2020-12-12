@@ -5,8 +5,7 @@ import 'package:progress_dialog/progress_dialog.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:toast/toast.dart';
 import 'package:http/http.dart' as http;
-import 'package:knitting_stuff/mainscreen.dart';
-import 'package:knitting_stuff/user.dart';
+//import 'package:knitting_stuff/user.dart';
 
 
 class LoginScreen extends StatefulWidget {
@@ -110,7 +109,7 @@ class _LoginScreenState extends State<LoginScreen> {
         type: ProgressDialogType.Normal, isDismissible: false);
     pr.style(message: "Login...");
     await pr.show();
-    http.post("https://itprojectoverload.com /knittingstuff/php/login_user.php", body: {
+    http.post("https://itprojectoverload.com/knittingstuff/php/login_user.php", body: {
       "email": _email,
       "password": _password,
     }).then((res) {
@@ -123,14 +122,13 @@ class _LoginScreenState extends State<LoginScreen> {
           duration: Toast.LENGTH_LONG,
           gravity: Toast.TOP,
         );
-        User user = new User(
+        /*User user = new User(
             email: _email,
             name: userdata[1],
             password: _password,
             phone: userdata[2],
-            datereg: userdata[3]);
-        Navigator.push(context,
-            MaterialPageRoute(builder: (BuildContext context) => MainScreen(user: user)));
+            datereg: userdata[3]);*/
+        
       } else {
         Toast.show(
           "Login failed",
