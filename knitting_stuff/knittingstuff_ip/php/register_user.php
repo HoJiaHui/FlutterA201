@@ -16,10 +16,10 @@ if ($conn->query($sqlregister) === TRUE){
 }
 
 function sendEmail($otp,$email){
-    $from = "noreply@foodninjav2.com";
+    $from = "noreply@knittingstuff.com";
     $to = $email;
-    $subject = "From Food Ninja V2. Verify your account";
-    $message = "Use the following link to verify your account :"."\n http://slumberjer.com/foodninjav2/php/verify_account.php?email=".$email."&key=".$otp;
+    $subject = "Welcome to the world of Knitting Stuff. Kindly verify your account";
+    $message = "Use the following link to verify your account :"."\n http://itprojectoverload.com/knittingstuff/php/verify_account.php?email=".$email."&key=".$otp;
     $headers = "From:" . $from;
     mail($email,$subject,$message, $headers);
 }
