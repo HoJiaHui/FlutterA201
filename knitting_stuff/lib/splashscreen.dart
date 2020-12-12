@@ -7,9 +7,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: new ThemeData(primarySwatch: Colors.cyan),
+      theme: new ThemeData(
+        primarySwatch: Colors.lightBlue,
+        ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.lightBlue[100],
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -19,7 +22,7 @@ class MyApp extends StatelessWidget {
                scale: 2,
               ),
               SizedBox(
-                height: 20,
+                height: 10,
               ),
               new ProgressIndicator(),
             ],

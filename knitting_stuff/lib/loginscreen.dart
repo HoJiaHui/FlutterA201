@@ -5,6 +5,7 @@ import 'package:progress_dialog/progress_dialog.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:toast/toast.dart';
 import 'package:http/http.dart' as http;
+import 'package:flutter_signin_button/flutter_signin_button.dart';
 //import 'package:knitting_stuff/user.dart';
 
 
@@ -32,6 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return WillPopScope(
         onWillPop: _onBackPressAppBar,
         child: Scaffold(
+          backgroundColor: Colors.lightBlue[100],
             appBar: AppBar(
               title: Text('Login'),
             ),
@@ -44,7 +46,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: <Widget>[
                     Image.asset(
                       'assets/images/logo.png',
-                      scale: 2,
+                      scale: 0.8,
+                      height:175,
+                      width: 175,
+                      
                     ),
                     TextField(
                         controller: _emcontroller,
@@ -66,8 +71,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       minWidth: 300,
                       height: 50,
                       child: Text('Login'),
-                      color: Colors.black,
-                      textColor: Colors.white,
+                      color: Colors.white,
+                      textColor: Colors.indigo,
                       elevation: 15,
                       onPressed: _onLogin,
                     ),
@@ -82,20 +87,40 @@ class _LoginScreenState extends State<LoginScreen> {
                             _onChange(value);
                           },
                         ),
-                        Text('Remember Me', style: TextStyle(fontSize: 16))
+                        Text('Remember Me', style: TextStyle(fontSize: 12))
                       ],
                     ),
                     GestureDetector(
                         onTap: _onRegister,
-                        child: Text('Register New Account',
-                            style: TextStyle(fontSize: 16))),
+                        child: Text('Dont have an account? Sign up one',
+                            style: TextStyle(fontSize: 12))),
                     SizedBox(
-                      height: 10,
+                      height: 5,
                     ),
+                    Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text("Or",
+                          style: TextStyle(
+                              fontSize: 15.0, fontFamily: "Poppins-Medium")),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Divider(),
+                  SignInButton(Buttons.GoogleDark,
+                  onPressed: () {}, 
+                  ),
+                  Divider(),
+                  SignInButton(Buttons.Facebook,
+                  onPressed: () {}, 
+                  ),
                     GestureDetector(
                         onTap: _onForgot,
                         child: Text('Forgot Account',
-                            style: TextStyle(fontSize: 16))),
+                            style: TextStyle(fontSize: 14))),
+                          
                   ],
                 ),
               ),
