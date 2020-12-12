@@ -1,6 +1,6 @@
 # knitting_stuff
 #based on ahmadhanis_food_ninja
-# thank you sir hanis for his teaching and guide
+#thank you sir hanis for his teaching and guide
 
 
 A new Flutter project.
