@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:toast/toast.dart';
 import 'package:http/http.dart' as http;
 import 'package:knitting_stuff/mainscreen.dart';
+import 'package:knitting_stuff/user.dart';
 
 
 class LoginScreen extends StatefulWidget {
